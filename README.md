@@ -70,6 +70,28 @@ PASS
 ok    serpapi-code-challenge-go/regexp_based/knowledge_graph  115.824s
 ```
 
+### css based (goquery = net/html + cascadia)
+
+```
+> go test -bench=. -count=10 -benchtime=1000x  -benchmem -cpuprofile cpu.out ./css_based/knowledge_graph/
+
+goos: darwin
+goarch: arm64
+pkg: serpapi-code-challenge-go/css_based/knowledge_graph
+BenchmarkJSON-8         1000     4053030 ns/op   3833417 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4053088 ns/op   3833388 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4196824 ns/op   3833406 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4021421 ns/op   3833388 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4013918 ns/op   3833385 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4060367 ns/op   3833387 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4018894 ns/op   3833370 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     3984418 ns/op   3833405 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4011480 ns/op   3833372 B/op    13754 allocs/op
+BenchmarkJSON-8         1000     4008080 ns/op   3833387 B/op    13754 allocs/op
+PASS
+ok    serpapi-code-challenge-go/css_based/knowledge_graph 40.810s
+```
+
 Profiling
 ------------------------------------------------------------------------------------------
 
