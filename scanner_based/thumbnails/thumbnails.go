@@ -44,8 +44,6 @@ func (t *Thumbnails) nextPair(html []byte) (id []byte, blob []byte, rest []byte)
 
 	blob = bytes.ReplaceAll(blob, []byte(`\x`), []byte("x"))
 
-	// panic(string(blob))
-
 	return
 }
 
