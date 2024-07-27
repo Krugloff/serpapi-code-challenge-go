@@ -29,8 +29,6 @@ func TestJSON (t *testing.T) {
 	err := json.Unmarshal(productedJSON, &parsedJSON)
 	if err != nil { t.Errorf("%v", err) }
 
-	t.Error(string(productedJSON))
-
 	if eq := reflect.DeepEqual(parsedJSON, expectedJSON); !eq {
 		t.Error("Result is not equal to expected!")
 	}
